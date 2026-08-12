@@ -1,0 +1,219 @@
+/* ============================================
+   Love List 页面样式 - 简洁版
+   ============================================ */
+
+.list-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+/* 标题 */
+.list-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #5D4E6D;
+    margin: 60px 0 40px 0;
+    font-weight: 600;
+}
+
+/* 分类标签 */
+.category-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-btn {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #5D4E6D;
+}
+
+.tab-btn:hover {
+    border-color: #ff6b9d;
+    background: #fff5f9;
+}
+
+.tab-btn.active {
+    background: #ff6b9d;
+    border-color: #ff6b9d;
+    color: white;
+}
+
+/* 列表内容 */
+.list-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 列表项 */
+.list-item {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.list-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* 完成标记 */
+.item-status {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* 内容 */
+.item-content {
+    flex: 1;
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.item-title {
+    font-size: 1.1rem;
+    color: #1f2937;
+    margin: 0;
+    font-weight: 500;
+}
+
+.item-category {
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.category-travel { background: #dbeafe; color: #1e40af; }
+.category-food { background: #fef3c7; color: #92400e; }
+.category-life { background: #fce7f3; color: #9f1239; }
+.category-dream { background: #e0e7ff; color: #3730a3; }
+.category-other { background: #f3e8ff; color: #6b21a8; }
+
+.item-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* 已完成样式 */
+.list-item.completed {
+    background: #f0fdf4;
+}
+
+.list-item.completed .item-title {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+/* 错开动画 */
+.list-item:nth-child(1) { animation-delay: 0.05s; }
+.list-item:nth-child(2) { animation-delay: 0.1s; }
+.list-item:nth-child(3) { animation-delay: 0.15s; }
+.list-item:nth-child(4) { animation-delay: 0.2s; }
+.list-item:nth-child(5) { animation-delay: 0.25s; }
+.list-item:nth-child(6) { animation-delay: 0.3s; }
+.list-item:nth-child(7) { animation-delay: 0.35s; }
+.list-item:nth-child(8) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 空状态 */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #9ca3af;
+}
+
+.empty-state h3 {
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin: 10px 0;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .list-title {
+        font-size: 1.5rem;
+        margin: 40px 0 30px 0;
+    }
+    
+    .category-tabs {
+        gap: 8px;
+        padding: 0 10px;
+    }
+    
+    .tab-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .list-container {
+        padding: 20px 15px 60px;
+    }
+    
+    .list-item {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .item-status {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+    
+    .item-title {
+        font-size: 1rem;
+    }
+    
+    .item-description {
+        font-size: 0.9rem;
+    }
+    
+    .item-header {
+        flex-wrap: wrap;
+    }
+}
+
+/* 平板适配 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .list-container {
+        padding: 30px 20px 70px;
+    }
+    
+    .list-title {
+        font-size: 1.8rem;
+    }
+}

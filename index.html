@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like_Girl - 我们的小世界</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="header-wrap">
+        <div class="header">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">Together for all time</a></h1>
+            </div>
+            <div class="word">相伴人间烟火，共守岁月清欢</div>
+        </div>
+    </div>
+
+    <!-- 背景图片区域 -->
+    <div class="bg-img">
+        <div class="middle">
+            <div class="img-male">
+                <img src="https://ludeng-huihua.pages.dev/file/lianai/1786529375227_男头像.png?v=2" alt="男生头像" id="maleAvatar">
+                <span id="maleName">李炎</span>
+            </div>
+            <div class="love-icon">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23ff6b9d' d='M50,85 C20,65 10,50 10,35 C10,20 18,10 30,10 C38,10 44,14 50,22 C56,14 62,10 70,10 C82,10 90,20 90,35 C90,50 80,65 50,85 Z'/%3E%3C/svg%3E" alt="爱心">
+            </div>
+            <div class="img-female">
+                <img src="https://ludeng-huihua.pages.dev/file/lianai/1786529382217_女头像.jpg?v=2" alt="女生头像" id="femaleAvatar">
+                <span id="femaleName">何婉瑜</span>
+            </div>
+        </div>
+        <!-- 波浪 SVG -->
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- 时间区域 -->
+    <div class="time">
+        <span id="span_dt_dt">这是我们一起走过的</span>
+        <b id="tian">0</b>天
+        <b id="shi">0</b>时
+        <b id="fen">0</b>分
+        <b id="miao">0</b>秒
+    </div>
+
+    <!-- 卡片区域 -->
+    <div class="card-wrap">
+        <div class="row central">
+            <div class="card col-lg-4 col-sm-12 col-sm-x-12 flex-h animated fadeInUp" onclick="location.href='little.html'">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23a18cd1'/%3E%3Cpath fill='white' d='M50,20 L30,40 L40,40 L40,70 L60,70 L60,40 L70,40 Z'/%3E%3C/svg%3E" alt="">
+                <div class="text">
+                    <span><a href="little.html">点点滴滴</a></span>
+                    <p>年入繁星所你爱的</p>
+                </div>
+            </div>
+            <div class="card col-lg-4 col-sm-12 col-sm-x-12 flex-h animated fadeInUp" onclick="location.href='loveImg.html'">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23f093fb'/%3E%3Ccircle cx='50' cy='40' r='12' fill='white'/%3E%3Cpath fill='white' d='M50,55 C35,55 25,60 25,75 L75,75 C75,60 65,55 50,55 Z'/%3E%3C/svg%3E" alt="">
+                <div class="text">
+                    <span><a href="loveImg.html">珍贵时刻</a></span>
+                    <p>烟花易逝，记忆永恒</p>
+                </div>
+            </div>
+            <div class="card col-lg-4 col-12 col-sm-12 flex-h animated fadeInUp" onclick="location.href='list.html'">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff6b9d'/%3E%3Crect x='30' y='30' width='40' height='8' rx='4' fill='white'/%3E%3Crect x='30' y='46' width='40' height='8' rx='4' fill='white'/%3E%3Crect x='30' y='62' width='40' height='8' rx='4' fill='white'/%3E%3C/svg%3E" alt="">
+                <div class="text">
+                    <span><a href="list.html">旅途清单</a></span>
+                    <p>恋爱列表 你我之间的约定</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer-warp">
+        <div class="footer">
+            <p>🄯 Made with ❤️</p>
+            <p>Copyright © 2026 - 9999 Together for all time</p>
+        </div>
+    </div>
+
+    <!-- 快捷按钮 -->
+    <div class="quick-actions">
+        <a href="#" class="quick-btn" onclick="scrollToTop(event)" title="回到顶部">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+            </svg>
+        </a>
+        <a href="index.html" class="quick-btn" title="首页">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

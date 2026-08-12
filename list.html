@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love List - Together for all time</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="header-wrap">
+        <div class="header">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">Together for all time</a></h1>
+            </div>
+            <div class="word">相伴人间烟火，共守岁月清欢</div>
+        </div>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="list-container">
+        <h2 class="list-title">Love List · 你我之间的旅行</h2>
+
+        <!-- 分类标签 -->
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">💕 全部</button>
+            <button class="tab-btn" data-category="travel">✈️ 旅行</button>
+            <button class="tab-btn" data-category="food">🍰 美食</button>
+            <button class="tab-btn" data-category="life">🏠 生活</button>
+            <button class="tab-btn" data-category="dream">🌟 梦想</button>
+            <button class="tab-btn" data-category="other">💫 其他</button>
+        </div>
+
+        <!-- 列表内容 -->
+        <div class="list-content" id="listContent">
+            <!-- 将由 JS 动态生成 -->
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer-warp">
+        <div class="footer">
+            <p>🄯 Made with ❤️</p>
+            <p>Copyright © 2026 - 9999 Together for all time</p>
+        </div>
+    </div>
+
+    <!-- 快捷按钮 -->
+    <div class="quick-actions">
+        <a href="#" class="quick-btn" onclick="scrollToTop(event)" title="回到顶部">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+            </svg>
+        </a>
+        <a href="index.html" class="quick-btn" title="首页">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/list.js"></script>
+</body>
+</html>

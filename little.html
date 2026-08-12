@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点点滴滴 - Together for all time</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/little.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="header-wrap">
+        <div class="header">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">Together for all time</a></h1>
+            </div>
+            <div class="word">相伴人间烟火，共守岁月清欢</div>
+        </div>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="little-container">
+        <div class="little-header">
+            <h2>点点滴滴 · 我们的日历</h2>
+            <p class="subtitle">记录每一个值得纪念的日子 ✨</p>
+        </div>
+
+        <!-- 日历控制栏 -->
+        <div class="calendar-controls">
+            <button class="ctrl-btn origin-btn" onclick="goToOrigin()">缘始曰</button>
+            <button class="ctrl-btn" onclick="previousMonth()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            <h3 class="current-month" id="currentMonth">2026年7月</h3>
+            <button class="ctrl-btn" onclick="nextMonth()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+            </button>
+            <button class="ctrl-btn today-btn" onclick="goToday()">今天</button>
+        </div>
+
+        <!-- 图例说明 -->
+        <div class="calendar-legend">
+            <span class="legend-item">
+                <span class="legend-dot" style="background: #ff6b9d;"></span>
+                纪念日
+            </span>
+            <span class="legend-item">
+                <span class="legend-dot" style="background: #667eea;"></span>
+                节日
+            </span>
+            <span class="legend-item">
+                <span class="legend-dot" style="background: #ffd93d;"></span>
+                有笔记
+            </span>
+        </div>
+
+        <!-- 日历主体 -->
+        <div class="calendar-wrapper">
+            <div class="calendar-weekdays">
+                <div class="weekday">日</div>
+                <div class="weekday">一</div>
+                <div class="weekday">二</div>
+                <div class="weekday">三</div>
+                <div class="weekday">四</div>
+                <div class="weekday">五</div>
+                <div class="weekday">六</div>
+            </div>
+            <div class="calendar-days" id="calendarDays">
+                <!-- 日历日期将由 JS 动态生成 -->
+            </div>
+        </div>
+
+        <!-- 笔记弹窗 -->
+        <div class="note-modal" id="noteModal">
+            <div class="note-modal-content">
+                <div class="note-modal-header">
+                    <h3 id="modalDate">2026年7月21日</h3>
+                    <button class="close-btn" onclick="closeNoteModal()">×</button>
+                </div>
+                <div class="note-modal-body">
+                    <!-- 笔记显示 -->
+                    <div class="note-display">
+                        <div class="note-display-title" id="displayTitle"></div>
+                        <div class="note-display-content" id="displayContent"></div>
+                    </div>
+                    
+                    <!-- 无笔记提示 -->
+                    <div class="no-note" id="noNote" style="display: none;">
+                        <p>📝 这一天还没有记录</p>
+                        <p class="hint">可以在代码中添加预设笔记</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer-warp">
+        <div class="footer">
+            <p>🄯 Made with ❤️</p>
+            <p>Copyright © 2026 - 9999 Together for all time</p>
+        </div>
+    </div>
+
+    <!-- 快捷按钮 -->
+    <div class="quick-actions">
+        <a href="#" class="quick-btn" onclick="scrollToTop(event)" title="回到顶部">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+            </svg>
+        </a>
+        <a href="index.html" class="quick-btn" title="首页">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/little.js"></script>
+</body>
+</html>
