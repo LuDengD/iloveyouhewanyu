@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 ul {
     list-style: none;
 }
@@ -36,6 +41,11 @@ body {
     background-size: 1.5rem 1.5rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 
                  'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -110,6 +120,13 @@ body {
     color: #667eea;
 }
 
+.header-wrap .header .logo .subtitle-cn {
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 0.3rem;
+    font-weight: 400;
+}
+
 .version {
     background: #667eea;
     color: white;
@@ -135,7 +152,7 @@ body {
     box-sizing: border-box;
     background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cdefs%3E%3ClinearGradient id="grad1" x1="0%25" y1="0%25" x2="100%25" y2="100%25"%3E%3Cstop offset="0%25" style="stop-color:%2387CEEB;stop-opacity:0.6" /%3E%3Cstop offset="50%25" style="stop-color:%2398D8C8;stop-opacity:0.5" /%3E%3Cstop offset="100%25" style="stop-color:%23B0E57C;stop-opacity:0.4" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="1440" height="320" fill="url(%23grad1)"/%3E%3C/svg%3E') no-repeat center;
     background-size: cover;
-    padding-top: 8rem;
+    padding-top: 10rem;
     position: relative;
 }
 
@@ -446,19 +463,37 @@ body {
 /* 响应式设计 */
 @media only screen and (max-width: 768px) {
     :root {
-        font-size: 12px;
+        font-size: 14px;
+    }
+    
+    * {
+        max-width: 100%;
     }
     
     .header-wrap {
         height: 3.5rem;
+        width: 100%;
     }
     
     .header-wrap .header {
         padding: 0 1rem;
+        width: 100%;
     }
     
     .header-wrap .header .logo h1 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+    
+    .header-wrap .header .logo .subtitle-cn {
+        font-size: 0.75rem;
+        margin-top: 0.2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .header-wrap .header .word {
@@ -466,13 +501,28 @@ body {
     }
     
     .bg-img {
-        padding-top: 5rem;
+        padding-top: 5.5rem;
+        width: 100%;
+        overflow: hidden;
     }
     
     .bg-img .middle {
         padding: 2rem 1rem;
-        border-radius: 2rem;
-        margin: 0 1rem 3rem;
+        border-radius: 2.5rem;
+        margin: 0 1rem 2.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        max-width: calc(100vw - 2rem);
+    }
+    
+    .bg-img .middle .img-male,
+    .bg-img .middle .img-female {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
     }
     
     .bg-img .middle img {
@@ -482,8 +532,16 @@ body {
     
     .bg-img .middle .img-male span,
     .bg-img .middle .img-female span {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-top: 0.5rem;
+        white-space: nowrap;
+    }
+    
+    .bg-img .middle .love-icon {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .bg-img .middle .love-icon img {
@@ -491,47 +549,76 @@ body {
         height: 4rem;
     }
     
+    .bg-img .waves {
+        height: 3rem;
+        width: 100%;
+    }
+    
     .time {
-        font-size: 1.2rem;
-        padding: 2rem 1rem;
+        font-size: 1rem;
+        padding: 2.5rem 1rem;
+        letter-spacing: 0.1rem;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .time span {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 3rem;
+        letter-spacing: 0.05rem;
     }
     
     .time b {
         font-size: 2rem;
+        display: inline-block;
+        margin: 0 0.2rem;
     }
     
     .card-wrap {
-        padding: 0 1rem 2rem;
+        padding: 0 1rem 3rem;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .card-wrap .row {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     
     .card-wrap .row .card {
         padding: 1.5rem;
+        border-radius: 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+        grid-column: span 1;
     }
     
     .card-wrap .row .card img {
-        width: 4rem;
-        height: 4rem;
-        margin-right: 1rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-right: 1.2rem;
+        flex-shrink: 0;
+    }
+    
+    .card-wrap .row .card .text {
+        flex: 1;
+        min-width: 0;
     }
     
     .card-wrap .row .card .text span {
         font-size: 1.5rem;
-        line-height: 2rem;
+        line-height: 2.2rem;
+        display: block;
     }
     
     .card-wrap .row .card .text p {
         font-size: 1rem;
         width: 100%;
+        margin-top: 0.3rem;
+        word-break: break-word;
     }
     
     .card-wrap .card-b {
@@ -555,46 +642,125 @@ body {
     .quick-actions {
         right: 15px;
         bottom: 15px;
+        gap: 8px;
     }
     
     .quick-btn {
-        width: 45px;
-        height: 45px;
+        width: 48px;
+        height: 48px;
+    }
+    
+    .quick-btn svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .footer-warp {
+        margin-top: 3rem;
+        width: 100%;
     }
     
     .footer-warp .footer {
-        padding: 1.5rem 1rem;
-        font-size: 0.9rem;
+        padding: 2rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .footer-warp .footer p {
         line-height: 2rem;
+        font-size: 0.9rem;
+        word-break: break-word;
     }
 }
 
 /* 平板适配 */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    :root {
+        font-size: 13px;
+    }
+    
     .header-wrap .header {
-        padding: 0 1.5rem;
+        padding: 0 2rem;
+    }
+    
+    .header-wrap .header .logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    .header-wrap .header .word {
+        font-size: 1rem;
+        width: auto;
+    }
+    
+    .bg-img {
+        padding-top: 6rem;
     }
     
     .bg-img .middle {
-        padding: 3rem 2rem;
-        margin: 0 2rem 4rem;
+        padding: 3rem 3rem 2.5rem;
+        margin: 0 2rem 3.5rem;
+        max-width: 700px;
     }
     
     .bg-img .middle img {
-        width: 8rem;
-        height: 8rem;
+        width: 9rem;
+        height: 9rem;
+    }
+    
+    .bg-img .middle .img-male span,
+    .bg-img .middle .img-female span {
+        font-size: 1.4rem;
     }
     
     .bg-img .middle .love-icon img {
-        width: 5.5rem;
-        height: 5.5rem;
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    .bg-img .waves {
+        height: 4rem;
+    }
+    
+    .time {
+        padding: 3rem 2rem;
+        font-size: 1.6rem;
+    }
+    
+    .time span {
+        font-size: 1.7rem;
+        line-height: 4.5rem;
+    }
+    
+    .time b {
+        font-size: 2.5rem;
     }
     
     .card-wrap {
-        padding: 0 1.5rem 3rem;
+        padding: 0 2rem 3rem;
+        max-width: 900px;
+    }
+    
+    .card-wrap .row {
+        gap: 1.5rem;
+    }
+    
+    .card-wrap .row .card {
+        padding: 1.8rem;
+    }
+    
+    .card-wrap .row .card img {
+        width: 4.8rem;
+        height: 4.8rem;
+        margin-right: 1.8rem;
+    }
+    
+    .card-wrap .row .card .text span {
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+    }
+    
+    .card-wrap .row .card .text p {
+        font-size: 1.05rem;
     }
     
     .col-lg-4 {
@@ -603,6 +769,10 @@ body {
     
     .col-lg-6 {
         grid-column: span 6;
+    }
+    
+    .footer-warp {
+        margin-top: 3.5rem;
     }
 }
 

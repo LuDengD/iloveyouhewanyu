@@ -25,11 +25,14 @@
 
 @media (max-width: 768px) {
     .text-ce {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        margin: 25px 0 20px 0;
+        padding: 0 1rem;
     }
     
     .row.central {
-        gap: 20px;
+        gap: 15px;
+        padding: 0 1rem 60px;
     }
 }
 
@@ -48,15 +51,19 @@
     opacity: 0;
 }
 
-@media (max-width: 1024px) {
+/* 平板适配 - 2列 */
+@media (min-width: 768px) and (max-width: 1024px) {
     .img_card {
         width: calc((100% - 30px) / 2);
     }
 }
 
+/* 手机适配 - 1列 */
 @media (max-width: 768px) {
     .img_card {
         width: 100%;
+        padding: 1.2rem;
+        border-radius: 1.2rem;
     }
 }
 
@@ -92,6 +99,21 @@
     margin-bottom: 1rem;
     transition: all 0.23s linear;
     display: block;
+}
+
+/* 手机端图片高度优化 */
+@media (max-width: 768px) {
+    .love_img img {
+        height: 20rem;
+        border-radius: 0.8rem;
+    }
+}
+
+/* 平板端图片高度优化 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .love_img img {
+        height: 22rem;
+    }
 }
 
 /* 文字信息 */

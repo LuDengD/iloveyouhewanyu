@@ -4,10 +4,20 @@
 
 // 照片数据配置
 const PHOTOS_DATA = [
-        {
+     {
+        url: 'https://ludeng-huihua.pages.dev/file/lianai/1786548881167_3.jpg',
+        date: '2026-07-14',
+        description: '老婆写的手写信好温暖，真的好感动，我爱你老婆❤️'
+    },
+    {
+        url: 'https://ludeng-huihua.pages.dev/file/lianai/1786548884161_2.jpg',
+        date: '2026-07-14',
+        description: '真的好美丽呀老婆，我姐也说有夫妻相呢狠狠沾老婆光了哈哈哈'
+    },
+    {
         url: 'https://ludeng-huihua.pages.dev/file/lianai/1786530944687_1.jpg',
         date: '2026-06-27',
-        description: '第一次约会，第一次来到小鱼家中，第一次合照，真的真的真的好开心！'
+        description: '第一次约会，第一次来到小鱼家中，第一次合照，还有两只这么可爱的宝宝，真的真的真的好开心！'
     },
     {
         url: 'https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800',
